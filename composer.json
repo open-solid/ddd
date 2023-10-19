@@ -29,7 +29,7 @@
         "psalm/plugin-phpunit": "dev-master"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit tests -v"
+        "test": "vendor/bin/phpunit tests"
     },
     "minimum-stability": "dev"
 }
