@@ -1,0 +1,32 @@
+{
+    "name": "yceruto/ddd",
+    "description": "Domain-Driven Design building blocks",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yonel Ceruto",
+            "email": "yonelceruto@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ddd\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ddd\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "symfony/uid": "^7.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "require-dev": {
+        "vimeo/psalm": "6.x-dev",
+        "psalm/plugin-phpunit": "dev-master"
+    },
+    "minimum-stability": "dev"
+}
