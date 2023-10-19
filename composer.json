@@ -28,5 +28,8 @@
         "vimeo/psalm": "6.x-dev",
         "psalm/plugin-phpunit": "dev-master"
     },
+    "scripts": {
+        "test": "vendor/bin/phpunit tests -v"
+    },
     "minimum-stability": "dev"
 }
