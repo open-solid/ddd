@@ -8,6 +8,8 @@ readonly abstract class Uuid implements \Stringable
 
     abstract public static function fromString(string $value): static;
 
+    abstract public static function generate(): string;
+
     public function value(): string
     {
         return $this->value;
