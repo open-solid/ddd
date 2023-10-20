@@ -18,7 +18,7 @@ readonly class UuidV7Rfc4122 extends Uuid
         return new static(self::generate());
     }
 
-    public static function fromString(string $value): static
+    public static function from(string $value): static
     {
         try {
             return new static(SymfonyUuid::fromString($value)->toRfc4122());
