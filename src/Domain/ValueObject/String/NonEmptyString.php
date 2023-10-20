@@ -19,7 +19,7 @@ class NonEmptyString extends Str
     /** @var string */
     protected const MAX_LENGTH_ERROR_MESSAGE = 'String cannot be longer than %d characters.';
 
-    public static function from(string $value): self
+    public static function from(string $value): static
     {
         $string = (new static($value))->trim();
 

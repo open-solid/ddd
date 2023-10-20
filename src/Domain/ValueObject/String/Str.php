@@ -8,7 +8,7 @@ use Symfony\Component\String\UnicodeString;
 
 class Str extends UnicodeString
 {
-    public static function from(string $value): self
+    public static function from(string $value): static
     {
         return new static($value);
     }
