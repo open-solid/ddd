@@ -17,12 +17,6 @@
     </projectFiles>
 
     <issueHandlers>
-        <UnusedClass>
-            <errorLevel type="suppress">
-                <directory name="src"/>
-            </errorLevel>
-        </UnusedClass>
-
         <ImplicitToStringCast>
             <errorLevel type="suppress">
                 <directory name="src"/>
