@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ddd\Error;
 
 class EntityNotFoundError extends DomainError

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ddd\Tests\ValueObject\Uid;
 
 use Ddd\Error\InvalidArgumentError;

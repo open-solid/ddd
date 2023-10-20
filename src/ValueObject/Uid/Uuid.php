@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ddd\ValueObject\Uid;
 
 readonly abstract class Uuid implements \Stringable
