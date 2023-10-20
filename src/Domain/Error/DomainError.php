@@ -25,10 +25,7 @@ class DomainError extends \DomainException
         return $self;
     }
 
-    /**
-     * @return static
-     */
-    public static function create(string $message = null, int $code = 0, \Throwable $previous = null): self
+    public static function create(string $message = null, int $code = 0, \Throwable $previous = null): static
     {
         return new static($message ?? static::DEFAULT_MESSAGE, $code, $previous);
     }
