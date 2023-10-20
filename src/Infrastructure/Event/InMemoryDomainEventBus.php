@@ -11,7 +11,7 @@ readonly class InMemoryDomainEventBus implements DomainEventBus
     /**
      * @param array<class-string, DomainEventSubscriber> $subscribers
      */
-    public function __construct(private array $subscribers)
+    public function __construct(private array $subscribers = [])
     {
     }
 
