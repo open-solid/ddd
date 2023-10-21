@@ -6,6 +6,6 @@ namespace Ddd\Tests\Domain\Entity;
 
 use Ddd\Domain\Event\DomainEvent;
 
-readonly class EntityUpdatedEvent extends DomainEvent
+readonly class EntityUpdated extends DomainEvent
 {
 }

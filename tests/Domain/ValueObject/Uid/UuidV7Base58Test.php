@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ddd\Tests\Domain\ValueObject\Uid;
 
-use Ddd\Domain\Error\InvalidArgumentError;
+use Ddd\Domain\Error\InvalidArgument;
 use Ddd\Domain\ValueObject\Uid\UuidV7Base58;
 use PHPUnit\Framework\TestCase;
 
@@ -27,7 +27,7 @@ class UuidV7Base58Test extends TestCase
 
     public function testCreateFromStringInvalid(): void
     {
-        $this->expectException(InvalidArgumentError::class);
+        $this->expectException(InvalidArgument::class);
         $this->expectExceptionMessage('Invalid UUID: "1C4Gx"');
 
         UuidV7Base58::from('1C4Gx');

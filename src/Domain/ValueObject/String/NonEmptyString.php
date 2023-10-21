@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\ValueObject\String;
 
-use Ddd\Domain\Error\InvalidArgumentError;
+use Ddd\Domain\Error\InvalidArgument;
 
 class NonEmptyString extends Str
 {
@@ -24,15 +24,15 @@ class NonEmptyString extends Str
         $string = (new static($value))->trim();
 
         if ($string->isEmpty()) {
-            throw InvalidArgumentError::create(static::EMPTY_ERROR_MESSAGE);
+            throw InvalidArgument::create(static::EMPTY_ERROR_MESSAGE);
         }
 
         if ($string->length() < static::MIN_LENGTH) {
-            throw InvalidArgumentError::create(sprintf(static::MIN_LENGTH_ERROR_MESSAGE, static::MIN_LENGTH));
+            throw InvalidArgument::create(sprintf(static::MIN_LENGTH_ERROR_MESSAGE, static::MIN_LENGTH));
         }
 
         if ($string->length() > static::MAX_LENGTH) {
-            throw InvalidArgumentError::create(sprintf(static::MAX_LENGTH_ERROR_MESSAGE, static::MAX_LENGTH));
+            throw InvalidArgument::create(sprintf(static::MAX_LENGTH_ERROR_MESSAGE, static::MAX_LENGTH));
         }
 
         return $string;

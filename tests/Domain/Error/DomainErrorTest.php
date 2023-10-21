@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Ddd\Tests\Domain\Error;
 
 use Ddd\Domain\Error\DomainError;
-use Ddd\Domain\Error\EntityNotFoundError;
-use Ddd\Domain\Error\InvalidArgumentError;
+use Ddd\Domain\Error\EntityNotFound;
+use Ddd\Domain\Error\InvalidArgument;
 use PHPUnit\Framework\TestCase;
 
 class DomainErrorTest extends TestCase
@@ -40,8 +40,8 @@ class DomainErrorTest extends TestCase
 
         $e = DomainError::createMany([
             DomainError::create(),
-            InvalidArgumentError::create(),
-            EntityNotFoundError::create(),
+            InvalidArgument::create(),
+            EntityNotFound::create(),
         ]);
         $this->assertCount(3, $e->getExceptions());
 

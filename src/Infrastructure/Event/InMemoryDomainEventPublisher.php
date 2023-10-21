@@ -3,10 +3,10 @@
 namespace Ddd\Infrastructure\Event;
 
 use Ddd\Domain\Event\DomainEvent;
-use Ddd\Domain\Event\DomainEventBus;
+use Ddd\Domain\Event\DomainEventPublisher;
 use Ddd\Domain\Event\DomainEventSubscriber;
 
-readonly class InMemoryDomainEventBus implements DomainEventBus
+readonly class InMemoryDomainEventPublisher implements DomainEventPublisher
 {
     /**
      * @param array<class-string, DomainEventSubscriber> $subscribers

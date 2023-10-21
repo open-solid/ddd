@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\ValueObject\Uid;
 
-use Ddd\Domain\Error\InvalidArgumentError;
+use Ddd\Domain\Error\InvalidArgument;
 use Symfony\Component\Uid\Uuid as SymfonyUuid;
 
 /**
@@ -22,7 +22,7 @@ readonly class UuidV7Base58 extends Uuid
         try {
             return new static(SymfonyUuid::fromString($value)->toBase58());
         } catch (\InvalidArgumentException $e) {
-            throw InvalidArgumentError::create($e->getMessage(), $e->getCode(), $e);
+            throw InvalidArgument::create($e->getMessage(), $e->getCode(), $e);
         }
     }
 

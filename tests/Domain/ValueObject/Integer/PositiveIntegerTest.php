@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ddd\Tests\Domain\ValueObject\Integer;
 
-use Ddd\Domain\Error\InvalidArgumentError;
+use Ddd\Domain\Error\InvalidArgument;
 use Ddd\Domain\ValueObject\Integer\PositiveInteger;
 use PHPUnit\Framework\TestCase;
 
@@ -19,7 +19,7 @@ class PositiveIntegerTest extends TestCase
 
     public function testNegativeInteger(): void
     {
-        $this->expectException(InvalidArgumentError::class);
+        $this->expectException(InvalidArgument::class);
         $this->expectExceptionMessage('Value must be positive.');
 
         PositiveInteger::from(-1);
