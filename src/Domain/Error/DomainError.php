@@ -38,7 +38,7 @@ class DomainError extends \DomainException
         return $this->exceptions;
     }
 
-    final protected function __construct(string $message, int $code, ?\Throwable $previous)
+    final protected function __construct(string $message, int $code = 0, \Throwable $previous = null)
     {
         parent::__construct($message, $code, $previous);
     }
