@@ -1,19 +1,18 @@
 <?php
 
-namespace Ddd\Tests\Infrastructure\Event;
+namespace Ddd\Tests\Domain\Event;
 
-use Ddd\Domain\Event\DomainEventSubscriber;
-use Ddd\Infrastructure\Event\InMemoryDomainEventPublisher;
+use Ddd\Domain\Event\NativeDomainEventPublisher;
 use Ddd\Tests\Domain\Entity\EntityUpdated;
 use PHPUnit\Framework\TestCase;
 
-class InMemoryDomainEventBusTest extends TestCase
+class NativeDomainEventBusTest extends TestCase
 {
     public function testPublishAndSubscriber(): void
     {
         $tester = $this;
         $subscribers = [
-            EntityUpdated::class => new class($tester) implements DomainEventSubscriber {
+            EntityUpdated::class => new class($tester) {
                 public function __construct(private readonly TestCase $tester)
                 {
                 }
@@ -25,7 +24,7 @@ class InMemoryDomainEventBusTest extends TestCase
                 }
             },
         ];
-        $publisher = new InMemoryDomainEventPublisher($subscribers);
+        $publisher = new NativeDomainEventPublisher($subscribers);
         $publisher->publish(new EntityUpdated('uuid'));
     }
 }
