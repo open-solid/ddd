@@ -27,7 +27,7 @@ readonly abstract class Uuid implements \Stringable
         return $this->value();
     }
 
-    final protected function __construct(private string $value)
+    final protected function __construct(protected string $value)
     {
     }
 }
