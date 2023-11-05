@@ -34,4 +34,18 @@ class NativeDomainEventBusTest extends TestCase
 
         $bus->publish(new EntityUpdated('uuid'));
     }
+
+    public function testNoSubscriberForEvent(): void
+    {
+        $this->expectNotToPerformAssertions();
+
+        $bus = new NativeDomainEventBus(new NativeMessageBus([
+            new HandleMessageMiddleware(
+                new HandlersLocator([]),
+                HandlersCountPolicy::NO_HANDLER,
+            ),
+        ]));
+
+        $bus->publish(new EntityUpdated('uuid'));
+    }
 }
