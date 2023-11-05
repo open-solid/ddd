@@ -6,8 +6,12 @@ namespace Ddd\Domain\Event;
 
 use DateTimeImmutable;
 use Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
+use Yceruto\Messenger\Model\Message;
 
-readonly abstract class DomainEvent
+/**
+ * @psalm-immutable
+ */
+readonly abstract class DomainEvent implements Message
 {
     public string $eventId;
     public DateTimeImmutable $occurredOn;

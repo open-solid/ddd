@@ -22,7 +22,9 @@
     "require": {
         "php": ">=8.2",
         "symfony/uid": "^7.0",
-        "symfony/string": "^7.0"
+        "symfony/string": "^7.0",
+        "psr/container": "2.0.x-dev",
+        "yceruto/messenger": "dev-main"
     },
     "require-dev": {
         "vimeo/psalm": "^6.0",
@@ -30,7 +32,8 @@
         "psalm/plugin-phpunit": "^0.18"
     },
     "scripts": {
-        "test": "vendor/bin/phpunit tests"
+        "test": "vendor/bin/phpunit tests",
+        "psalm": "vendor/bin/psalm --show-info=true"
     },
     "minimum-stability": "dev"
 }

@@ -2,29 +2,30 @@
 
 namespace Ddd\Tests\Domain\Event;
 
-use Ddd\Domain\Event\NativeDomainEventPublisher;
+use Ddd\Domain\Event\NativeDomainEventBus;
 use Ddd\Tests\Domain\Entity\EntityUpdated;
 use PHPUnit\Framework\TestCase;
+use Yceruto\Messenger\Bus\NativeMessageBus;
+use Yceruto\Messenger\Handler\HandlersCountPolicy;
+use Yceruto\Messenger\Handler\HandlersLocator;
+use Yceruto\Messenger\Middleware\HandleMessageMiddleware;
 
 class NativeDomainEventBusTest extends TestCase
 {
-    public function testPublishAndSubscriber(): void
+    public function testPublishAndSubscribe(): void
     {
-        $tester = $this;
-        $subscribers = [
-            EntityUpdated::class => new class($tester) {
-                public function __construct(private readonly TestCase $tester)
-                {
-                }
+        /** @psalm-suppress UnusedClosureParam */
+        $subscriber = function (EntityUpdated $event): void {
+            /** @psalm-suppress InternalMethod */
+            $this->addToAssertionCount(1);
+        };
 
-                public function __invoke(EntityUpdated $event): void
-                {
-                    /** @psalm-suppress InternalMethod */
-                    $this->tester->addToAssertionCount(1);
-                }
-            },
-        ];
-        $publisher = new NativeDomainEventPublisher($subscribers);
-        $publisher->publish(new EntityUpdated('uuid'));
+        $bus = new NativeDomainEventBus(new NativeMessageBus([
+            new HandleMessageMiddleware(new HandlersLocator([
+                EntityUpdated::class => [$subscriber],
+            ]), HandlersCountPolicy::NO_HANDLER),
+        ]));
+
+        $bus->publish(new EntityUpdated('uuid'));
     }
 }
