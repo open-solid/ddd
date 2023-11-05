@@ -23,7 +23,6 @@
         "php": ">=8.2",
         "symfony/uid": "^7.0",
         "symfony/string": "^7.0",
-        "psr/container": "2.0.x-dev",
         "yceruto/messenger": "dev-main"
     },
     "require-dev": {

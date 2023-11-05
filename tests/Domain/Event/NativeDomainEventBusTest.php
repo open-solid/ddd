@@ -15,14 +15,20 @@ class NativeDomainEventBusTest extends TestCase
     public function testPublishAndSubscribe(): void
     {
         /** @psalm-suppress UnusedClosureParam */
-        $subscriber = function (EntityUpdated $event): void {
+        $subscriber1 = function (EntityUpdated $event): void {
+            /** @psalm-suppress InternalMethod */
+            $this->addToAssertionCount(1);
+        };
+
+        /** @psalm-suppress UnusedClosureParam */
+        $subscriber2 = function (EntityUpdated $event): void {
             /** @psalm-suppress InternalMethod */
             $this->addToAssertionCount(1);
         };
 
         $bus = new NativeDomainEventBus(new NativeMessageBus([
             new HandleMessageMiddleware(new HandlersLocator([
-                EntityUpdated::class => [$subscriber],
+                EntityUpdated::class => [$subscriber1, $subscriber2],
             ]), HandlersCountPolicy::NO_HANDLER),
         ]));
 
