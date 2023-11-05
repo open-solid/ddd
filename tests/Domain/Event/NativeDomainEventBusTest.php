@@ -33,6 +33,9 @@ class NativeDomainEventBusTest extends TestCase
         ]));
 
         $bus->publish(new EntityUpdated('uuid'));
+
+        /** @psalm-suppress InternalMethod */
+        $this->assertSame(2, $this->numberOfAssertionsPerformed());
     }
 
     public function testNoSubscriberForEvent(): void
