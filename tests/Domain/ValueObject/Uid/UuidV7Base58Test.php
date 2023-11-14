@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Tests\Domain\ValueObject\Uid;
+namespace Tests\Ddd\Domain\ValueObject\Uid;
 
 use Ddd\Domain\Error\InvalidArgument;
 use Ddd\Domain\ValueObject\Uid\UuidV7Base58;

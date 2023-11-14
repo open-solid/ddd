@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Tests\Domain\ValueObject\String;
+namespace Tests\Ddd\Domain\ValueObject\String;
 
 use Ddd\Domain\ValueObject\String\Str;
 use PHPUnit\Framework\TestCase;

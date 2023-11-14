@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Tests\Domain\ValueObject\Integer;
+namespace Tests\Ddd\Domain\ValueObject\Integer;
 
 use Ddd\Domain\Error\InvalidArgument;
 use Ddd\Domain\ValueObject\Integer\PositiveInteger;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddd\Tests\Domain\ValueObject\String;
+namespace Tests\Ddd\Domain\ValueObject\String;
 
 use Ddd\Domain\Error\InvalidArgument;
 use Ddd\Domain\ValueObject\String\NonEmptyString;

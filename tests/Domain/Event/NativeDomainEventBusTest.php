@@ -1,10 +1,11 @@
 <?php
 
-namespace Ddd\Tests\Domain\Event;
+namespace Tests\Ddd\Domain\Event;
 
 use Ddd\Domain\Event\NativeDomainEventBus;
-use Ddd\Tests\Domain\Entity\EntityUpdated;
+use Tests\Ddd\Domain\Entity\EntityUpdated;
 use PHPUnit\Framework\TestCase;
+use Yceruto\Messenger\Bus\NativeLazyMessageBus;
 use Yceruto\Messenger\Bus\NativeMessageBus;
 use Yceruto\Messenger\Handler\HandlersCountPolicy;
 use Yceruto\Messenger\Handler\HandlersLocator;
@@ -26,13 +27,17 @@ class NativeDomainEventBusTest extends TestCase
             $this->addToAssertionCount(1);
         };
 
-        $bus = new NativeDomainEventBus(new NativeMessageBus([
-            new HandleMessageMiddleware(new HandlersLocator([
-                EntityUpdated::class => [$subscriber1, $subscriber2],
-            ]), HandlersCountPolicy::NO_HANDLER),
-        ]));
+        $nativeMessageBus = new NativeMessageBus([
+            new HandleMessageMiddleware(
+                new HandlersLocator([
+                    EntityUpdated::class => [$subscriber1, $subscriber2],
+                ]), HandlersCountPolicy::NO_HANDLER
+            ),
+        ]);
+        $bus = new NativeDomainEventBus(new NativeLazyMessageBus($nativeMessageBus));
 
         $bus->publish(new EntityUpdated('uuid'));
+        $bus->flush();
 
         /** @psalm-suppress InternalMethod */
         $this->assertSame(2, $this->numberOfAssertionsPerformed());
@@ -42,13 +47,15 @@ class NativeDomainEventBusTest extends TestCase
     {
         $this->expectNotToPerformAssertions();
 
-        $bus = new NativeDomainEventBus(new NativeMessageBus([
+        $nativeMessageBus = new NativeMessageBus([
             new HandleMessageMiddleware(
                 new HandlersLocator([]),
                 HandlersCountPolicy::NO_HANDLER,
             ),
-        ]));
+        ]);
+        $bus = new NativeDomainEventBus(new NativeLazyMessageBus($nativeMessageBus));
 
         $bus->publish(new EntityUpdated('uuid'));
+        $bus->flush();
     }
 }

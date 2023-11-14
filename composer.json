@@ -16,7 +16,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Ddd\\Tests\\": "tests/"
+            "Tests\\Ddd\\": "tests/"
         }
     },
     "require": {
@@ -26,7 +26,7 @@
         "yceruto/messenger": "dev-main"
     },
     "require-dev": {
-        "vimeo/psalm": "^6.0",
+        "vimeo/psalm": "^5.0",
         "phpunit/phpunit": "^10.0",
         "psalm/plugin-phpunit": "^0.18"
     },

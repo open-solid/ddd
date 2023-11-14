@@ -2,11 +2,12 @@
 
 namespace Ddd\Domain\Event;
 
-use Yceruto\Messenger\Bus\MessageBus;
+use Yceruto\Messenger\Bus\FlushableMessageBus;
+use Yceruto\Messenger\Bus\LazyMessageBus;
 
-readonly class NativeDomainEventBus implements DomainEventBus
+readonly class NativeDomainEventBus implements DomainEventBus, FlushableMessageBus
 {
-    public function __construct(private MessageBus $messageBus)
+    public function __construct(private LazyMessageBus $messageBus)
     {
     }
 
@@ -15,5 +16,10 @@ readonly class NativeDomainEventBus implements DomainEventBus
         foreach ($events as $event) {
             $this->messageBus->dispatch($event);
         }
+    }
+
+    public function flush(): void
+    {
+        $this->messageBus->flush();
     }
 }

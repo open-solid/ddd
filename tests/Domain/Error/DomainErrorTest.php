@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Tests\Domain\Error;
+namespace Tests\Ddd\Domain\Error;
 
 use Ddd\Domain\Error\DomainError;
 use Ddd\Domain\Error\EntityNotFound;
