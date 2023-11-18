@@ -28,7 +28,7 @@ class DomainErrorTest extends TestCase
             DomainError::create('Domain error one.'),
             DomainError::create('Domain error two.'),
         ]);
-        $this->assertCount(2, $e->getExceptions());
+        $this->assertCount(2, $e->getErrors());
 
         throw $e;
     }
@@ -43,7 +43,7 @@ class DomainErrorTest extends TestCase
             InvalidArgument::create(),
             EntityNotFound::create(),
         ]);
-        $this->assertCount(3, $e->getExceptions());
+        $this->assertCount(3, $e->getErrors());
 
         throw $e;
     }

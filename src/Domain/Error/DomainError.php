@@ -9,18 +9,18 @@ class DomainError extends \DomainException
     /** @var string */
     protected const DEFAULT_MESSAGE = 'A domain error occurred.';
 
-    private array $exceptions = [];
+    private array $errors = [];
 
     /**
-     * @param array<self> $exceptions
+     * @param array<self> $errors
      */
-    public static function createMany(array $exceptions): static
+    public static function createMany(array $errors): static
     {
-        $messages = array_map(static fn (self $exception) => $exception->getMessage(), $exceptions);
+        $messages = array_map(static fn (self $error) => $error->getMessage(), $errors);
         $messages = implode("\n", $messages);
 
         $self = static::create($messages);
-        $self->exceptions = $exceptions;
+        $self->errors = $errors;
 
         return $self;
     }
@@ -33,9 +33,9 @@ class DomainError extends \DomainException
     /**
      * @return array<self>
      */
-    public function getExceptions(): array
+    public function getErrors(): array
     {
-        return $this->exceptions;
+        return $this->errors;
     }
 
     final protected function __construct(string $message, int $code = 0, \Throwable $previous = null)
