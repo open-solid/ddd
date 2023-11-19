@@ -1,7 +1,9 @@
 <?php
 
-namespace Ddd\Domain\Event;
+namespace Ddd\Infrastructure\Event;
 
+use Ddd\Domain\Event\DomainEvent;
+use Ddd\Domain\Event\DomainEventBus;
 use Yceruto\Messenger\Bus\FlushableMessageBus;
 use Yceruto\Messenger\Bus\LazyMessageBus;
 

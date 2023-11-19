@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Ddd\Domain\ValueObject\Uid;
 
+/**
+ * @psalm-immutable
+ */
 readonly abstract class Uuid implements \Stringable
 {
     abstract public static function create(): static;

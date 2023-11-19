@@ -28,7 +28,8 @@
     "require-dev": {
         "vimeo/psalm": "^5.0",
         "phpunit/phpunit": "^10.0",
-        "psalm/plugin-phpunit": "^0.18"
+        "psalm/plugin-phpunit": "^0.18",
+        "symfony/messenger": "^7.0"
     },
     "scripts": {
         "test": "vendor/bin/phpunit tests",

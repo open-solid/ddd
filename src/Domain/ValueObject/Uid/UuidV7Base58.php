@@ -8,6 +8,8 @@ use Ddd\Domain\Error\InvalidArgument;
 use Symfony\Component\Uid\Uuid as SymfonyUuid;
 
 /**
+ * @psalm-immutable
+ *
  * @example 1C4Gx3HwRKMqqm8pYTjiXg
  */
 readonly class UuidV7Base58 extends Uuid

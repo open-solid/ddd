@@ -1,10 +1,10 @@
 <?php
 
-namespace Tests\Ddd\Domain\Event;
+namespace Tests\Ddd\Infrastructure\Event;
 
-use Ddd\Domain\Event\NativeDomainEventBus;
-use Tests\Ddd\Domain\Entity\EntityUpdated;
+use Ddd\Infrastructure\Event\NativeDomainEventBus;
 use PHPUnit\Framework\TestCase;
+use Tests\Ddd\Domain\Entity\EntityUpdated;
 use Yceruto\Messenger\Bus\NativeLazyMessageBus;
 use Yceruto\Messenger\Bus\NativeMessageBus;
 use Yceruto\Messenger\Handler\HandlersCountPolicy;
