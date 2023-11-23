@@ -5,11 +5,11 @@ namespace OpenSolid\Tests\Ddd\Infrastructure\Event;
 use OpenSolid\Ddd\Infrastructure\Event\NativeDomainEventBus;
 use PHPUnit\Framework\TestCase;
 use OpenSolid\Tests\Ddd\Domain\Entity\EntityUpdated;
-use Yceruto\Messenger\Bus\NativeLazyMessageBus;
-use Yceruto\Messenger\Bus\NativeMessageBus;
-use Yceruto\Messenger\Handler\HandlersCountPolicy;
-use Yceruto\Messenger\Handler\HandlersLocator;
-use Yceruto\Messenger\Middleware\HandleMessageMiddleware;
+use OpenSolid\Messenger\Bus\NativeLazyMessageBus;
+use OpenSolid\Messenger\Bus\NativeMessageBus;
+use OpenSolid\Messenger\Handler\HandlersCountPolicy;
+use OpenSolid\Messenger\Handler\HandlersLocator;
+use OpenSolid\Messenger\Middleware\HandleMessageMiddleware;
 
 class NativeDomainEventBusTest extends TestCase
 {

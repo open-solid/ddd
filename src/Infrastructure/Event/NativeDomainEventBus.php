@@ -4,8 +4,8 @@ namespace OpenSolid\Ddd\Infrastructure\Event;
 
 use OpenSolid\Ddd\Domain\Event\DomainEvent;
 use OpenSolid\Ddd\Domain\Event\DomainEventBus;
-use Yceruto\Messenger\Bus\FlushableMessageBus;
-use Yceruto\Messenger\Bus\LazyMessageBus;
+use OpenSolid\Messenger\Bus\FlushableMessageBus;
+use OpenSolid\Messenger\Bus\LazyMessageBus;
 
 readonly class NativeDomainEventBus implements DomainEventBus, FlushableMessageBus
 {

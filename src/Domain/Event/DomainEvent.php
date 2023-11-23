@@ -6,7 +6,7 @@ namespace OpenSolid\Ddd\Domain\Event;
 
 use DateTimeImmutable;
 use OpenSolid\Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
-use Yceruto\Messenger\Model\Message;
+use OpenSolid\Messenger\Model\Message;
 
 /**
  * @psalm-immutable
