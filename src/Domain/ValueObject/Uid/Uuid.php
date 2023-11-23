@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\Uid;
+namespace OpenSolid\Ddd\Domain\ValueObject\Uid;
 
 /**
  * @psalm-immutable

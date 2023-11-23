@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\ValueObject\Uid;
+namespace OpenSolid\Tests\Ddd\Domain\ValueObject\Uid;
 
-use Ddd\Domain\Error\InvalidArgument;
-use Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
 use PHPUnit\Framework\TestCase;
 
 class UuidV7Rfc4122Test extends TestCase

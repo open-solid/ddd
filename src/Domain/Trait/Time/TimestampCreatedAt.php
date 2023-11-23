@@ -1,6 +1,6 @@
 <?php
 
-namespace Ddd\Domain\Trait\Time;
+namespace OpenSolid\Ddd\Domain\Trait\Time;
 
 use DateTimeImmutable;
 

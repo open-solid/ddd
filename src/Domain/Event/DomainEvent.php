@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\Event;
+namespace OpenSolid\Ddd\Domain\Event;
 
 use DateTimeImmutable;
-use Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
+use OpenSolid\Ddd\Domain\ValueObject\Uid\UuidV7Rfc4122;
 use Yceruto\Messenger\Model\Message;
 
 /**

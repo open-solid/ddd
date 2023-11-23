@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\Integer;
+namespace OpenSolid\Ddd\Domain\ValueObject\Integer;
 
 readonly class Integer implements \Stringable
 {

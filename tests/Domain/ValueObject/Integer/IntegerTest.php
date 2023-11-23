@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\ValueObject\Integer;
+namespace OpenSolid\Tests\Ddd\Domain\ValueObject\Integer;
 
-use Ddd\Domain\ValueObject\Integer\Integer;
+use OpenSolid\Ddd\Domain\ValueObject\Integer\Integer;
 use PHPUnit\Framework\TestCase;
 
 class IntegerTest extends TestCase

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\ValueObject\String;
+namespace OpenSolid\Tests\Ddd\Domain\ValueObject\String;
 
-use Ddd\Domain\ValueObject\String\Str;
+use OpenSolid\Ddd\Domain\ValueObject\String\Str;
 use PHPUnit\Framework\TestCase;
 
 class StrTest extends TestCase

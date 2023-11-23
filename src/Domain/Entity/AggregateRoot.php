@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\Entity;
+namespace OpenSolid\Ddd\Domain\Entity;
 
-use Ddd\Domain\Error\DomainError;
-use Ddd\Domain\Event\DomainEvent;
+use OpenSolid\Ddd\Domain\Error\DomainError;
+use OpenSolid\Ddd\Domain\Event\DomainEvent;
 
 trait AggregateRoot
 {

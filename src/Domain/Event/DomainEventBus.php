@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\Event;
+namespace OpenSolid\Ddd\Domain\Event;
 
 interface DomainEventBus
 {

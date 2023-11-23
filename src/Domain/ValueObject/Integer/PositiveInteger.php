@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\Integer;
+namespace OpenSolid\Ddd\Domain\ValueObject\Integer;
 
-use Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
 
 readonly class PositiveInteger extends Integer
 {

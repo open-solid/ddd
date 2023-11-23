@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\Entity;
+namespace OpenSolid\Tests\Ddd\Domain\Entity;
 
 use DateTimeImmutable;
-use Ddd\Domain\Entity\AggregateRoot;
-use Ddd\Domain\Error\DomainError;
-use Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\Entity\AggregateRoot;
+use OpenSolid\Ddd\Domain\Error\DomainError;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Uid\UuidV7;
 

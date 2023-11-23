@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\String;
+namespace OpenSolid\Ddd\Domain\ValueObject\String;
 
 use Symfony\Component\String\UnicodeString;
 

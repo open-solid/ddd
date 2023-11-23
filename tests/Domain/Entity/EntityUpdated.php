@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\Entity;
+namespace OpenSolid\Tests\Ddd\Domain\Entity;
 
-use Ddd\Domain\Event\DomainEvent;
+use OpenSolid\Ddd\Domain\Event\DomainEvent;
 
 /**
  * @psalm-immutable

@@ -1,5 +1,5 @@
 {
-    "name": "yceruto/ddd",
+    "name": "open-solid/ddd",
     "description": "Domain-Driven Design building blocks",
     "type": "library",
     "license": "MIT",
@@ -11,12 +11,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Ddd\\": "src/"
+            "OpenSolid\\Ddd\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Ddd\\": "tests/"
+            "OpenSolid\\Tests\\Ddd\\": "tests/"
         }
     },
     "require": {

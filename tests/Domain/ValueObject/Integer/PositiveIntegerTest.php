@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\ValueObject\Integer;
+namespace OpenSolid\Tests\Ddd\Domain\ValueObject\Integer;
 
-use Ddd\Domain\Error\InvalidArgument;
-use Ddd\Domain\ValueObject\Integer\PositiveInteger;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\ValueObject\Integer\PositiveInteger;
 use PHPUnit\Framework\TestCase;
 
 class PositiveIntegerTest extends TestCase

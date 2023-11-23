@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Ddd\Domain\ValueObject\String;
+namespace OpenSolid\Tests\Ddd\Domain\ValueObject\String;
 
-use Ddd\Domain\Error\InvalidArgument;
-use Ddd\Domain\ValueObject\String\NonEmptyString;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\ValueObject\String\NonEmptyString;
 use PHPUnit\Framework\TestCase;
 
 class NonEmptyStringTest extends TestCase

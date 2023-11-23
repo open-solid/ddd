@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\Error;
+namespace OpenSolid\Ddd\Domain\Error;
 
 class InvalidArgument extends DomainError
 {

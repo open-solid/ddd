@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tests\Ddd\Domain\Error;
+namespace OpenSolid\Tests\Ddd\Domain\Error;
 
-use Ddd\Domain\Error\DomainError;
-use Ddd\Domain\Error\EntityNotFound;
-use Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\Error\DomainError;
+use OpenSolid\Ddd\Domain\Error\EntityNotFound;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
 use PHPUnit\Framework\TestCase;
 
 class DomainErrorTest extends TestCase

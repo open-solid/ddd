@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\Uid;
+namespace OpenSolid\Ddd\Domain\ValueObject\Uid;
 
-use Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
 use Symfony\Component\Uid\Uuid as SymfonyUuid;
 
 /**

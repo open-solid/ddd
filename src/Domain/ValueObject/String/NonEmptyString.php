@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ddd\Domain\ValueObject\String;
+namespace OpenSolid\Ddd\Domain\ValueObject\String;
 
-use Ddd\Domain\Error\InvalidArgument;
+use OpenSolid\Ddd\Domain\Error\InvalidArgument;
 
 class NonEmptyString extends Str
 {

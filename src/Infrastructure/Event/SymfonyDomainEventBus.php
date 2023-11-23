@@ -1,9 +1,9 @@
 <?php
 
-namespace Ddd\Infrastructure\Event;
+namespace OpenSolid\Ddd\Infrastructure\Event;
 
-use Ddd\Domain\Event\DomainEvent;
-use Ddd\Domain\Event\DomainEventBus;
+use OpenSolid\Ddd\Domain\Event\DomainEvent;
+use OpenSolid\Ddd\Domain\Event\DomainEventBus;
 use Symfony\Component\Messenger\MessageBusInterface;
 
 readonly class SymfonyDomainEventBus implements DomainEventBus

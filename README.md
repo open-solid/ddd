@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-composer require yceruto/ddd
+composer require open-solid/ddd
 ```
 
 ## License
