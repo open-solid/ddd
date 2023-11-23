@@ -23,7 +23,7 @@
         "php": ">=8.2",
         "symfony/uid": "^7.0",
         "symfony/string": "^7.0",
-        "yceruto/messenger": "dev-main"
+        "open-solid/messenger": "dev-main"
     },
     "require-dev": {
         "vimeo/psalm": "^5.0",
